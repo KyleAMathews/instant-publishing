@@ -1,0 +1,33 @@
+{
+  "name": "gatsby-hot-reloading-markdown",
+  "version": "1.0.0",
+  "private": true,
+  "description": "gatsby-hot-reloading-markdown",
+  "author": "Kyle Mathews",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@vanilla-extract/babel-plugin": "^1.1.7",
+    "@vanilla-extract/css": "^1.7.2",
+    "@vanilla-extract/webpack-plugin": "^2.1.11",
+    "gatsby": "^4.19.2",
+    "gatsby-plugin-vanilla-extract": "^2.0.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.45",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "typescript": "^4.7.4"
+  }
+}
