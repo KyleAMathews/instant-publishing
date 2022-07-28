@@ -1,5 +1,6 @@
 import * as React from "react"
 import { graphql, PageProps } from "gatsby"
+import { rhythm } from "../typography"
 
 const PageRoute = ({ data }: PageProps<Queries.PageTemplateQuery>) => {
   console.log(data)
@@ -9,13 +10,11 @@ const PageRoute = ({ data }: PageProps<Queries.PageTemplateQuery>) => {
     }
   })
   return (
-    <div>
-      <h1>
-        {data.webhookBodyMarkdown?.childMarkdownRemark?.frontmatter?.title}
-      </h1>
+    <div style={{ marginLeft: rhythm(2.5), marginRight: rhythm(2.5) }}>
+      <h1>{data.contentfulBlogPost?.title}</h1>
       <div
         dangerouslySetInnerHTML={{
-          __html: data.webhookBodyMarkdown?.childMarkdownRemark?.html,
+          __html: data.contentfulBlogPost.body.childMarkdownRemark.html,
         }}
       />
     </div>
@@ -26,12 +25,11 @@ export default PageRoute
 
 export const query = graphql`
   query PageTemplate {
-    webhookBodyMarkdown(id: { eq: "webhook-markdown" }) {
-      childMarkdownRemark {
-        html
-        frontmatter {
-          title
-          hotReload
+    contentfulBlogPost(slug: { eq: "fast-publishing" }) {
+      title
+      body {
+        childMarkdownRemark {
+          html
         }
       }
     }

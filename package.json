@@ -21,11 +21,17 @@
     "@vanilla-extract/css": "^1.7.2",
     "@vanilla-extract/webpack-plugin": "^2.1.11",
     "gatsby": "^4.19.2",
+    "gatsby-plugin-image": "^2.19.0",
+    "gatsby-plugin-typography": "^4.19.0",
     "gatsby-plugin-vanilla-extract": "^2.0.1",
     "gatsby-source-contentful": "^7.17.0",
     "gatsby-transformer-remark": "^5.19.0",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-typography": "^0.16.20",
+    "typography": "^0.16.21",
+    "typography-theme-fairy-gates": "^0.16.19",
+    "typography-theme-grand-view": "^0.16.19"
   },
   "devDependencies": {
     "@babel/core": "^7.18.9",
