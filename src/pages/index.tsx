@@ -14,7 +14,7 @@ const PageRoute = ({ data }: PageProps<Queries.PageTemplateQuery>) => {
       <h1>{data.contentfulBlogPost?.title}</h1>
       <div
         dangerouslySetInnerHTML={{
-          __html: data.contentfulBlogPost.body.childMarkdownRemark.html,
+          __html: data.contentfulBlogPost?.body?.childMarkdownRemark?.html,
         }}
       />
     </div>
